@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<descriptors>
+    <object class="Log">
+        <property name="operater" />
+        <property name="message" />
+    </object>
+</descriptors>

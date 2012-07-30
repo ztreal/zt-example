@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="myrestaurants-analytics:war exploded">
+    <output-path>$PROJECT_DIR$/../spring-data-document-examples/mongodb-myrestaurants-analytics/target/myrestaurants-analytics-0.1.0.BUILD-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="myrestaurants-analytics/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="myrestaurants-analytics" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

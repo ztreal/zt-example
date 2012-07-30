@@ -1,0 +1,25 @@
+<verifylist>
+	<verify>
+		<cid>1</cid>
+		<key>1</key>
+		<status>0</status>
+	</verify>
+	
+	<verify>
+		<cid>2</cid>
+		<key>2</key>
+		<status>0</status>
+	</verify>
+	
+	<verify>
+		<cid>3</cid>
+		<key>3</key>
+		<status>0</status>
+	</verify>
+	
+	<verify>
+		<cid>4</cid>
+		<key>4</key>
+		<status>0</status>
+	</verify>
+</verifylist>	
