@@ -1,7 +1,8 @@
 package dao;
 
 
-import org.apache.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -15,7 +16,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Time: 11：14
  */
 public  class BaseTestCase {
-    protected Logger log = Logger.getLogger(this.getClass());
+    protected Log log = LogFactory.getLog(this.getClass());
     protected static ApplicationContext appContext;
 
 

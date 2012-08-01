@@ -1,19 +1,13 @@
 package dao;
 
 import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
-import com.mongodb.Mongo;
 import com.mongodb.WriteResult;
 import com.zt.todo.log.UserLog;
 import org.junit.Test;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
-import org.springframework.data.mongodb.core.query.Update;
-import javax.annotation.Resource;
 import java.net.UnknownHostException;
-import java.util.List;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 
@@ -30,7 +24,7 @@ public class MongoTest extends BaseTestCase {
     @Test
     public void insertLog() throws UnknownHostException {
         UserLog userLog = new UserLog("zt", "吃饭");
-
+//        log.error("1");
         mongoOps.insert(new UserLog("zt", "我今天吃饭了"));
 
 
@@ -44,6 +38,7 @@ public class MongoTest extends BaseTestCase {
         //find
         UserLog savedLog =  mongoOps.findOne(new Query(where("operater").is("zt")), UserLog.class);
 
+        log.error(savedLog);
         System.out.println("savedLog : " + savedLog);
 
         //update
