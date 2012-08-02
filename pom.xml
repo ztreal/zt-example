@@ -85,6 +85,26 @@
            <version>4.10</version>
            <scope>test</scope>
        </dependency>
+            <groupId>com.taobao.tddl</groupId>
+            <artifactId>tddl-group-datasource</artifactId>
+            <version>3.0.1.5.taobaocode-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao.tddl</groupId>
+            <artifactId>tddl-atom-datasource</artifactId>
+            <version>3.0.1.5.taobaocode-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.14</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
 
  	</dependencies>
 
