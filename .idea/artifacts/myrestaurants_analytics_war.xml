@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="myrestaurants-analytics:war">
-    <output-path>$PROJECT_DIR$/../spring-data-document-examples/mongodb-myrestaurants-analytics/target</output-path>
-    <root id="archive" name="myrestaurants-analytics-0.1.0.BUILD-SNAPSHOT.war">
-      <element id="artifact" artifact-name="myrestaurants-analytics:war exploded" />
-    </root>
-  </artifact>
-</component>
