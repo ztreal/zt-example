@@ -5,29 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>zt-example</artifactId>
-        <groupId>www.zt.com</groupId>
+        <groupId>com.zt.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>www.zt.com</groupId>
+    <groupId>com.zt.example</groupId>
     <artifactId>zt-example-web</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>zt-example-web</name>
     <packaging>war</packaging>
-    <url>http://www.19e.com.cn</url>
+    <url>http://com.zt</url>
 
 
     <properties>
-        <cxf.version>2.2.4</cxf.version>
+    <cxf.version>2.2.4</cxf.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>www.zt.com</groupId>
-            <artifactId>zt-example-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>www.zt.com</groupId>
+            <groupId>com.zt.example</groupId>
             <artifactId>zt-example-util</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -52,14 +47,14 @@
             <build>
                 <plugins>
                     <!--动态打入参数和过滤不打包的文件的插件-->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <version>2.2</version>
-                        <configuration>
-                            <archiveClasses>true</archiveClasses>
-                        </configuration>
-                    </plugin>
+                    <!--<plugin>-->
+                        <!--<groupId>org.apache.maven.plugins</groupId>-->
+                        <!--<artifactId>maven-war-plugin</artifactId>-->
+                        <!--<version>2.2</version>-->
+                        <!--<configuration>-->
+                            <!--<archiveClasses>true</archiveClasses>-->
+                        <!--</configuration>-->
+                    <!--</plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -72,48 +67,49 @@
 
                 <!-- 开始 第二部分: 数据库配置，发布时需运维配置JNDI -->
                 <!--数据库连接的方式-->
-                <card.jdbc.datasource.type>dbcp</card.jdbc.datasource.type>
+                <todo.jdbc.datasource.type>dbcp</todo.jdbc.datasource.type>
                 <!-- mongo数据源 -->
                 <mongo.connectionsPerHost>5</mongo.connectionsPerHost>
-                <mongo.threadsAllowedToBlockForConnectionMultiplier>1000</mongo.threadsAllowedToBlockForConnectionMultiplier>
-               <mongo.connectTimeout>2000</mongo.connectTimeout>
-               <mongo.maxWaitTime></mongo.maxWaitTime>
-               <mongo.autoConnectRetry>true</mongo.autoConnectRetry>
-               <mongo.socketKeepAlive>fals</mongo.socketKeepAlive>
-               <mongo.socketTimeout>2000</mongo.socketTimeout>
-               <mongo.slaveOk>false</mongo.slaveOk>
+                <mongo.threadsAllowedToBlockForConnectionMultiplier>1000
+                </mongo.threadsAllowedToBlockForConnectionMultiplier>
+                <mongo.connectTimeout>2000</mongo.connectTimeout>
+                <mongo.maxWaitTime></mongo.maxWaitTime>
+                <mongo.autoConnectRetry>true</mongo.autoConnectRetry>
+                <mongo.socketKeepAlive>fals</mongo.socketKeepAlive>
+                <mongo.socketTimeout>2000</mongo.socketTimeout>
+                <mongo.slaveOk>false</mongo.slaveOk>
 
                 <!-- 结束 第二部分: 数据库配置，发布时需运维配置JNDI -->
 
                 <!-- 开始 第三部分: 缓存等服务资源，发布时需找运维确定 -->
                 <!--cache1位置-->
-                <card.memcached1.address>10.10.224.102:11211</card.memcached1.address>
+                <todo.memcached1.address>10.10.224.102:11211</todo.memcached1.address>
                 <!--cache2位置-->
-                <card.memcached2.address>10.10.224.102:11212</card.memcached2.address>
+                <todo.memcached2.address>10.10.224.102:11212</todo.memcached2.address>
 
                 <!-- 结束 第三部分: 缓存等服务资源，发布时需找运维确定 -->
 
                 <!-- 开始 第四部分: 服务器配置，发布时需找运维确定 -->
-                <card.log.level>DEBUG</card.log.level>
-                <card.log.path>c:\JD-JAVA-DEV\logs</card.log.path>
+                <todo.log.level>DEBUG</todo.log.level>
+                <todo.log.path>c:\example\logs</todo.log.path>
                 <!-- 结束 第四部分: 服务器配置，发布时需找运维确定 -->
 
                 <!-- 开始 第五部分: 依赖的外部接口，发布时需找接口人确定 -->
-             
+
 
                 <!-- 结束 第五部分: 依赖的外部接口，发布时需找接口人确定 -->
 
                 <!-- 开始 第六部分: 提供给别人的接口，发布时需通知调用人 -->
-                
+
                 <!-- 结束 第六部分: 提供给别人的接口，发布时需通知调用人 -->
 
                 <!-- 开始 第七部分: 开发设置 -->
-               
+
                 <!-- 开始 第七部分: 开发设置 -->
 
-                 
+
                 <!-- 开始 第八部分: 开发框架配置，发布人修改 -->
-                 
+
                 <!-- 结束 第八部分: 开发框架配置，发布人修改 -->
             </properties>
         </profile>

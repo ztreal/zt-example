@@ -11,14 +11,14 @@
 
                 <!-- 开始 第二部分: 数据库配置，发布时需运维配置JNDI -->
                 <!--数据库连接的方式-->
-                <card.jdbc.datasource.type>jndi</card.jdbc.datasource.type>
+                <todo.jdbc.datasource.type>jndi</todo.jdbc.datasource.type>
                 <!-- 结束 第二部分: 数据库配置，发布时需运维配置JNDI -->
 
                 <!-- 开始 第三部分: 缓存等服务资源，发布时需找运维确定 -->
                 <!--cache1位置-->
-                <card.memcached1.address>mc1.pop.360buy.com:11211</card.memcached1.address>
+                <todo.memcached1.address>127.0.0.1:11211</todo.memcached1.address>
                 <!--cache2位置-->
-                <card.memcached2.address>mc2.pop.360buy.com:11211</card.memcached2.address>
+                <todo.memcached2.address>127.0.0.1:11211</todo.memcached2.address>
 
                 <!-- 结束 第三部分: 缓存等服务资源，发布时需找运维确定 -->
 

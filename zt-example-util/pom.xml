@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="GB2312"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<artifactId>zt-example</artifactId>
-		<groupId>www.zt.com</groupId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
-	<groupId>www.zt.com</groupId>
-	<artifactId>zt-example-util</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<name>zt-example-util</name>
-	<url>http://www.zt.com</url>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>zt-example</artifactId>
+        <groupId>com.zt.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.zt.example</groupId>
+    <artifactId>zt-example-util</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>zt-example-util</name>
+    <url>http://com.zt</url>
 
-	<dependencies>
+    <dependencies>
         <dependency>
-            <groupId>commons-httpclient</groupId>
-            <artifactId>commons-httpclient</artifactId>
-            <version>3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        <!-- 现在工程版本是1.3.7-->
-        <dependency>
-            <groupId>com.googlecode.xmemcached</groupId>
-            <artifactId>xmemcached</artifactId>
-            <version>1.3.5</version>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.2.3</version>
         </dependency>
     </dependencies>
-	<build>
-		<finalName>zt-example-util-${project.version}</finalName>
-	</build>
+    <build>
+        <finalName>zt-example-util-${project.version}</finalName>
+    </build>
 </project>

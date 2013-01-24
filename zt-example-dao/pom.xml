@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="GB2312"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<artifactId>zt-example</artifactId>
-		<groupId>www.zt.com</groupId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
-	<groupId>www.zt.com</groupId>
-	<artifactId>zt-example-dao</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<name>zt-example-dao</name>
-	<url>http://www.zt.com</url>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>zt-example</artifactId>
+        <groupId>com.zt.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.zt.example</groupId>
+    <artifactId>zt-example-dao</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>zt-example-dao</name>
+    <url>http://example.zt.com</url>
 
-	<dependencies>
-		<dependency>
-			<groupId>www.zt.com</groupId>
-			<artifactId>zt-example-domain</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>com.zt.example</groupId>
+            <artifactId>zt-example-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
             <version>2.8.0</version>
-             </dependency>
+        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>0.2.10</version>
+        </dependency>
         <!--<dependency>-->
-            <!--<groupId>com.googlecode</groupId>-->
-            <!--<artifactId>mongo-java-orm</artifactId>-->
-            <!--<version>0.8</version>-->
+            <!--<groupId>com.oracle</groupId>-->
+            <!--<artifactId>oracle</artifactId>-->
+            <!--<version>11.2.0.3</version>-->
+            <!--<classifier>jdk6</classifier>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
             <version>1.0.0.RELEASE</version>
         </dependency>
-	</dependencies>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<finalName>zt-example-dao-${project.version}</finalName>
-	</build>
+    <build>
+        <finalName>zt-example-dao-${project.version}</finalName>
+    </build>
 </project>
