@@ -7,7 +7,7 @@ package com.zt.example.log;
  */
 public class UserLog {
 
-    private String operater;/*操作人2*/
+    private String operater;/*操作人111*/
     private String message;/*操作记录*/
 
     public UserLog(String operater, String message) {
