@@ -15,9 +15,8 @@
     <packaging>war</packaging>
     <url>http://com.zt</url>
 
-
     <properties>
-    <cxf.version>2.2.4</cxf.version>
+        <cxf.version>2.2.4</cxf.version>
     </properties>
 
     <dependencies>
@@ -48,12 +47,12 @@
                 <plugins>
                     <!--动态打入参数和过滤不打包的文件的插件-->
                     <!--<plugin>-->
-                        <!--<groupId>org.apache.maven.plugins</groupId>-->
-                        <!--<artifactId>maven-war-plugin</artifactId>-->
-                        <!--<version>2.2</version>-->
-                        <!--<configuration>-->
-                            <!--<archiveClasses>true</archiveClasses>-->
-                        <!--</configuration>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-war-plugin</artifactId>-->
+                    <!--<version>2.2</version>-->
+                    <!--<configuration>-->
+                    <!--<archiveClasses>true</archiveClasses>-->
+                    <!--</configuration>-->
                     <!--</plugin>-->
                 </plugins>
             </build>
@@ -67,31 +66,37 @@
 
                 <!-- 开始 第二部分: 数据库配置，发布时需运维配置JNDI -->
                 <!--数据库连接的方式-->
-                <todo.jdbc.datasource.type>dbcp</todo.jdbc.datasource.type>
+                <example.jdbc.datasource.type>dbcp</example.jdbc.datasource.type>
                 <!-- mongo数据源 -->
                 <mongo.connectionsPerHost>5</mongo.connectionsPerHost>
                 <mongo.threadsAllowedToBlockForConnectionMultiplier>1000
                 </mongo.threadsAllowedToBlockForConnectionMultiplier>
                 <mongo.connectTimeout>2000</mongo.connectTimeout>
-                <mongo.maxWaitTime></mongo.maxWaitTime>
+                <mongo.maxWaitTime>10</mongo.maxWaitTime>
                 <mongo.autoConnectRetry>true</mongo.autoConnectRetry>
                 <mongo.socketKeepAlive>fals</mongo.socketKeepAlive>
                 <mongo.socketTimeout>2000</mongo.socketTimeout>
                 <mongo.slaveOk>false</mongo.slaveOk>
 
+                <!-- mysql -->
+                <example.jdbc.driver>com.mysql.jdbc.Driver</example.jdbc.driver>
+                <example.jdbc.url>jdbc:mysql://localhost:3306/ztexample</example.jdbc.url>
+                <example.jdbc.username>ztexample</example.jdbc.username>
+                <example.jdbc.password>ztexample</example.jdbc.password>
+
                 <!-- 结束 第二部分: 数据库配置，发布时需运维配置JNDI -->
 
                 <!-- 开始 第三部分: 缓存等服务资源，发布时需找运维确定 -->
                 <!--cache1位置-->
-                <todo.memcached1.address>10.10.224.102:11211</todo.memcached1.address>
+                <example.memcached1.address>127.0.0.1:11211</example.memcached1.address>
                 <!--cache2位置-->
-                <todo.memcached2.address>10.10.224.102:11212</todo.memcached2.address>
+                <example.memcached2.address>127.0.0.1:11212</example.memcached2.address>
 
                 <!-- 结束 第三部分: 缓存等服务资源，发布时需找运维确定 -->
 
                 <!-- 开始 第四部分: 服务器配置，发布时需找运维确定 -->
-                <todo.log.level>DEBUG</todo.log.level>
-                <todo.log.path>c:\example\logs</todo.log.path>
+                <example.log.level>DEBUG</example.log.level>
+                <example.log.path>c:\example\logs</example.log.path>
                 <!-- 结束 第四部分: 服务器配置，发布时需找运维确定 -->
 
                 <!-- 开始 第五部分: 依赖的外部接口，发布时需找接口人确定 -->

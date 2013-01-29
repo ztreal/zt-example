@@ -1,4 +1,4 @@
-package com.zt.todo.dao;
+package com.zt.example.dao;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -9,7 +9,7 @@ import org.apache.commons.logging.LogFactory;
  * Time: 下午11:39
  */
 public class BaseDao {
-    private transient Log log = LogFactory.getLog(getClass());
+    protected transient Log log = LogFactory.getLog(getClass());
 
 
 }
