@@ -30,14 +30,20 @@
         <dependencies>
             <dependency>
                 <groupId>org.apache.mina</groupId>
-                <artifactId>mina-example</artifactId>
+                <artifactId>mina-core</artifactId>
                 <version>2.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.mina</groupId>
-                <artifactId>mina-core</artifactId>
+                <artifactId>mina-filter-compression</artifactId>
                 <version>2.0.7</version>
             </dependency>
+
+            <!--<dependency>-->
+            <!--????<groupId>org.apache.mina</groupId>-->
+            <!--????<artifactId>mina-example</artifactId>-->
+            <!--????<version>2.0.7</version>-->
+            <!--</dependency>-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
@@ -54,10 +60,10 @@
                 <version>1.1.1</version>
             </dependency>
             <dependency>
-                 <groupId>org.springframework.data</groupId>
-                 <artifactId>spring-data-mongodb</artifactId>
-                 <version>1.0.4.RELEASE</version>
-             </dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>1.0.4.RELEASE</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.directory.studio</groupId>
                 <artifactId>org.apache.commons.logging</artifactId>
