@@ -22,7 +22,7 @@ public class MinaServerTest {
     /**
      * Choose your favorite port number.
      */
-    private static final int PORT = 1111;
+     static final int PORT = 1111;
 
 
     public static void main(String[] args) throws Exception {
@@ -45,9 +45,12 @@ public class MinaServerTest {
  class ServerHandler extends IoHandlerAdapter {
     public void messageReceived(IoSession session, Object message) {
         System.out.println("get client meassage：" + message.toString());
+        session.write(message);
     }
 
     public void exceptionCaught(IoSession session, Throwable cause) {
         System.out.println("service exception\n" + cause);
     }
+
+
 }
