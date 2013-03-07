@@ -10,14 +10,12 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.PoolingClientConnectionManager;
 
 /**
- * Created with IntelliJ IDEA.
  * User: zhangtan
  * Date: 13-1-24
  * Time: 上午11:15
- * To change this template use File | Settings | File Templates.
  */
 public class PoolHttpClient {
-    public static void main() throws InterruptedException {
+    public static void main(String args[]) throws InterruptedException {
         SchemeRegistry schemeRegistry = new SchemeRegistry();
       schemeRegistry.register(new
               Scheme("http", 80, PlainSocketFactory.getSocketFactory()));

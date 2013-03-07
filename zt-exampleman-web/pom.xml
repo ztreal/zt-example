@@ -44,22 +44,6 @@
     <profiles>
         <profile>
             <id>development</id>
-            <build>
-                <plugins>
-                    <!--动态打入参数和过滤不打包的文件的插件-->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <version>2.2</version>
-                        <configuration>
-                            <archiveClasses>true</archiveClasses>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>development</id>
             <properties>
                 <spring.version>3.1.2.RELEASE</spring.version>
                 <!-- 开始 第一部分: 私密key配置，发布时需要运维配置，在product profile中去掉 -->

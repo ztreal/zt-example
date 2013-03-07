@@ -1,5 +1,6 @@
 package com.zt.example.util.http;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -32,6 +33,7 @@ public class GetHttpThread extends Thread{
                HttpResponse response = this.httpClient.execute(this.httpget, this.context);
                HttpEntity entity = response.getEntity();
                if (entity != null) {
+                   System.out.println(IOUtils.toString(entity.getContent()));
                    // do something useful with the entity
                }
                // ensure the connection gets released to the manager

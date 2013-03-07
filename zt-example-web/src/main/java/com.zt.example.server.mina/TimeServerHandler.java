@@ -21,6 +21,8 @@ public class TimeServerHandler extends IoHandlerAdapter
             session.close();
             return;
         }
+        System.out.println("message is "+message);
+        System.out.println("session is "+session);
         Date date = new Date();
         session.write( date.toString() );
         System.out.println("Message written...");
