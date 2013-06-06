@@ -6,10 +6,12 @@
     <resultMap id="LotteryRecordsMap" type="LotteryRecordsPo">
         <result column="user_id" property="userID" />
         <result column="password" property="password" />
+        <result column="status" property="status" />
+        <result column="create_date" property="createDate" />
     </resultMap>
 
     <sql id="commonColumns">
-      user_id, password
+      user_id, password ，status,create_date
     </sql>
 
     <select id="queryByguID" parameterType="java.lang.String"

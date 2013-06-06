@@ -12,6 +12,8 @@ public class User {
     public Integer sex;//用户性别
     public Integer  userType;//用户类型
     public String pwd;//用户密码
+    public String  createDate;
+    public String status;
 
     public User() {
     }
@@ -61,5 +63,21 @@ public class User {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
+    }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
