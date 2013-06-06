@@ -7,9 +7,55 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<context:property-placeholder location="classpath:" />
-	<import resource="spring-config-mongo.xml" />
+    <!-- 属性文件读入 -->
+	<context:property-placeholder location="classpath:example-production.properties" />
+	<!--<import resource="spring-config-datasource-mongodb.xml" />-->
+
+ 	<import resource="spring-config-datasource-${example.jdbc.datasource.type}.xml" />
 
 
+    <context:component-scan base-package="com.zt.example" />
+
+    	<!-- 解决字符串乱码 -->
+    	<bean
+    		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+    		<property name="messageConverters">
+    			<list>
+    				<bean
+    					class="org.springframework.http.converter.StringHttpMessageConverter">
+    					<property name="supportedMediaTypes">
+    						<list>
+    							<value>text/html;charset=UTF-8</value>
+    						</list>
+    					</property>
+    				</bean>
+    			</list>
+    		</property>
+    	</bean>
+
+
+    <bean id="velocityConfig"
+            class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+            <property name="resourceLoaderPath" value="/WEB-INF/vm/" />
+            <property name="configLocation" value="classpath:velocity.properties" />
+        </bean>
+
+
+        <bean id="viewResolver"
+            class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+            <property name="cache" value="false" />
+            <property name="prefix" value="" />
+            <property name="suffix" value=".vm" />
+            <property name="toolboxConfigLocation" value="WEB-INF/classes/toolbox.xml" />
+            <property name="contentType" value="text/html;charset=utf-8" />
+            <property name="exposeSpringMacroHelpers" value="true"/>
+            <property name="viewClass" value="com.zt.example.util.spring.VelocityToolsView"/>
+            <!--<property name="attributesMap">-->
+                <!--<map>-->
+                    <!--&lt;!&ndash;Velocity Escape Tool&ndash;&gt;-->
+                    <!--<entry key="esc"><bean class="org.apache.velocity.tools.generic.EscapeTool"/></entry>-->
+                <!--</map>-->
+            <!--</property>-->
+        </bean>
 
 </beans>

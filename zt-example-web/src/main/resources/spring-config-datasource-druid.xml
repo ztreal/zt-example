@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+  <!-- 数据源 -->
+        <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+            <property name="username" value="${datasource.jdbc.user}" />
+            <property name="password" value="${datasource.jdbc.password}" />
+            <property name="driverClassName" value="${datasource.jdbc.driverclass}" />
+            <property name="url" value="${userbase.datasource.jdbc.jdbcurl}" />
+
+            <!--初始化连接数-->
+            <property name="initialSize" value="${userbase.datasource.initialpoolsize}"/>
+            <!--连接池最小空闲-->
+            <property name="minIdle" value="${userbase.datasource.minpoolsize}"/>
+            <!--连接池最大空闲-->
+            <!--<property name="maxIdle" value="${minpoolsize}"/>-->
+            <!--连接池最大使用连接数量。Default: 15 -->
+            <property name="maxActive" value="${userbase.datasource.maxpoolsize}"/>
+            <!--最小逐出时间。最大空闲时间,指定时间内未使用则连接被丢弃。若为0则永不丢弃 Default: 0 -->
+            <property name="minEvictableIdleTimeMillis" value="${userbase.datasource.maxidletime}"/>
+            <!--指定时间检查所有连接池中的空闲连接 Default: 0 -->
+            <property name="timeBetweenEvictionRunsMillis" value="${userbase.datasource.idleconnectiontestperiod}"/>
+            <property name="validationQuery" value="SELECT * from dual" />
+            <property name="testWhileIdle" value="true" />
+            <property name="testOnBorrow" value="false" />
+            <property name="testOnReturn" value="false" />
+            <property name="filters" value="stat,log4j" />
+            <property name="proxyFilters">
+                <list><ref bean="stat-filter"/> </list>
+            </property>
+        </bean>
+        <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+            <property name="slowSqlMillis" value="${slowsql.time}" />
+            <property name="logSlowSql" value="true" />
+        </bean>
+</beans>

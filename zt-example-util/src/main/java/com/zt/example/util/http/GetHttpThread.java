@@ -9,6 +9,9 @@ import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 /**
  * Created with IntelliJ IDEA.
  * User: zhangtan
@@ -43,4 +46,8 @@ public class GetHttpThread extends Thread{
            }
        }
 
+    public static void main (String args[]) throws UnsupportedEncodingException {
+        System.out.println(URLEncoder.encode("我", "utf-8")) ;
+        System.out.println(URLEncoder.encode(URLEncoder.encode("我", "utf-8"),"utf-8")) ;
+    }
 }

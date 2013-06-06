@@ -1,10 +1,10 @@
 package com.zt.example.service.impl;
 
 
+import com.zt.example.domain.user.User;
 import com.zt.example.manager.user.UserManager;
 import com.zt.example.service.BaseService;
 import com.zt.example.service.UserService;
-import com.zt.example.user.User;
 
 /**
  * User: zhangtan

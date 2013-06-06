@@ -1,6 +1,6 @@
 package com.zt.example.dao.user;
 
-import com.zt.example.user.User;
+import com.zt.example.domain.user.User;
 
 /**
  * User: zhangtan

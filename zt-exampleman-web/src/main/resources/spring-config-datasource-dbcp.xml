@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="cardDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${card.jdbc.driver}"/>
+        <property name="url" value="${card.jdbc.url}"/>
+        <property name="username" value="${card.jdbc.username}"/>
+        <property name="password" value="${card.jdbc.password}"/>
+    </bean>
+
+</beans>
