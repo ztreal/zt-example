@@ -17,9 +17,9 @@
 
     <dependencies>
         <!--<dependency>-->
-            <!--<groupId>com.zt.example</groupId>-->
-            <!--<artifactId>zt-example-service</artifactId>-->
-            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--<groupId>com.zt.example</groupId>-->
+        <!--<artifactId>zt-example-service</artifactId>-->
+        <!--<version>1.0-SNAPSHOT</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>com.zt.example</groupId>
@@ -34,7 +34,10 @@
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
-            <version>2.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -59,13 +62,14 @@
                 <todo.jdbc.datasource.type>dbcp</todo.jdbc.datasource.type>
                 <!-- mongo数据源 -->
                 <mongo.connectionsPerHost>5</mongo.connectionsPerHost>
-                <mongo.threadsAllowedToBlockForConnectionMultiplier>1000</mongo.threadsAllowedToBlockForConnectionMultiplier>
-               <mongo.connectTimeout>2000</mongo.connectTimeout>
-               <mongo.maxWaitTime>10</mongo.maxWaitTime>
-               <mongo.autoConnectRetry>true</mongo.autoConnectRetry>
-               <mongo.socketKeepAlive>fals</mongo.socketKeepAlive>
-               <mongo.socketTimeout>2000</mongo.socketTimeout>
-               <mongo.slaveOk>false</mongo.slaveOk>
+                <mongo.threadsAllowedToBlockForConnectionMultiplier>1000
+                </mongo.threadsAllowedToBlockForConnectionMultiplier>
+                <mongo.connectTimeout>2000</mongo.connectTimeout>
+                <mongo.maxWaitTime>10</mongo.maxWaitTime>
+                <mongo.autoConnectRetry>true</mongo.autoConnectRetry>
+                <mongo.socketKeepAlive>fals</mongo.socketKeepAlive>
+                <mongo.socketTimeout>2000</mongo.socketTimeout>
+                <mongo.slaveOk>false</mongo.slaveOk>
 
                 <!-- 结束 第二部分: 数据库配置，发布时需运维配置JNDI -->
 
@@ -83,21 +87,21 @@
                 <!-- 结束 第四部分: 服务器配置，发布时需找运维确定 -->
 
                 <!-- 开始 第五部分: 依赖的外部接口，发布时需找接口人确定 -->
-             
+
 
                 <!-- 结束 第五部分: 依赖的外部接口，发布时需找接口人确定 -->
 
                 <!-- 开始 第六部分: 提供给别人的接口，发布时需通知调用人 -->
-                
+
                 <!-- 结束 第六部分: 提供给别人的接口，发布时需通知调用人 -->
 
                 <!-- 开始 第七部分: 开发设置 -->
-               
+
                 <!-- 开始 第七部分: 开发设置 -->
 
-                 
+
                 <!-- 开始 第八部分: 开发框架配置，发布人修改 -->
-                 
+
                 <!-- 结束 第八部分: 开发框架配置，发布人修改 -->
             </properties>
         </profile>

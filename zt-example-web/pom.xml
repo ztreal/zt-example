@@ -23,6 +23,10 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.zt.example</groupId>
             <artifactId>zt-example-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
@@ -52,25 +56,25 @@
             <artifactId>velocity</artifactId>
         </dependency>
         <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-webmvc</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-web</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-context</artifactId>
-                </dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-tools</artifactId>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>velocity-tools</groupId>-->
-            <!--<artifactId>velocity-tools</artifactId>-->
-            <!--<version>1.4</version>-->
+        <!--<groupId>velocity-tools</groupId>-->
+        <!--<artifactId>velocity-tools</artifactId>-->
+        <!--<version>1.4</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>javax.servlet</groupId>
