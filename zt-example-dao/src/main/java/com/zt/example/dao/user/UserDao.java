@@ -2,6 +2,8 @@ package com.zt.example.dao.user;
 
 import com.zt.example.domain.user.User;
 
+import java.util.List;
+
 /**
  * User: zhangtan
  * Date: 12-9-7
@@ -19,5 +21,5 @@ public interface UserDao {
      * 查询用户
      * @param user  用户vo
      */
-    public void queryAll(User user);
+    public List<User> queryAll(User user);
 }

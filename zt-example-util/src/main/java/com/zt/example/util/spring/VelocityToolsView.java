@@ -26,7 +26,12 @@ public class VelocityToolsView extends VelocityLayoutView {
  	                                         HttpServletResponse response) {
  		ToolContext toolContext = toolManager.createContext(request, response);
  		VelocityContext context = new VelocityContext(toolContext);
-// 		if (model != null) context.putAll(model.entrySet());
+        for (Map.Entry o : model.entrySet() ){
+            if (o != null){
+                context.put(o.getKey().toString(),o.getValue());
+            }
+        }
+
  		return context;
  	}
 

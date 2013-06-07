@@ -5,14 +5,20 @@ import com.zt.example.domain.user.User;
 import com.zt.example.manager.user.UserManager;
 import com.zt.example.service.BaseService;
 import com.zt.example.service.UserService;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * User: zhangtan
  * Date: 12-9-7
  * Time: 上午9:47
  */
+@Service
 public class UserServiceImpl  extends BaseService implements UserService {
 
+    @Resource
     private UserManager userManager ;
 
     public void insertUser(User user,String SQ_ID) {
@@ -20,11 +26,7 @@ public class UserServiceImpl  extends BaseService implements UserService {
         log.info("add user sucess!");
     }
 
-    public UserManager getUserManager() {
-        return userManager;
-    }
-
-    public void setUserManager(UserManager userManager) {
-        this.userManager = userManager;
-    }
+    public List<User> queryAll(User user){
+          return userManager.queryAll(user);
+     }
 }

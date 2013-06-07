@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.zt.example.domain.user.User">
-    <resultMap id="UserMap" type="User">
-        <result column="user_id" property="userID" />
+<mapper namespace="com.zt.example.dao.user.UserDao">
+    <resultMap id="UserMap" type="com.zt.example.domain.user.User">
+        <result column="user_id" property="userId" />
         <result column="password" property="password" />
         <result column="status" property="status" />
         <result column="create_date" property="createDate" />
@@ -18,7 +18,7 @@
             resultMap="UserMap">
         select <include refid="commonColumns"/>
         from example_user
-        where user_id=#{userID}
+        where user_id=#{userId}
     </select>
 
     <select id="queryAll" parameterType="com.zt.example.domain.user.User"
@@ -26,8 +26,8 @@
         select <include refid="commonColumns"/>
         from example_user
         <where>
-            <if test="userID!=null and userID!=''">
-                user_id=#{userID}
+            <if test="userId!=null and userId!=''">
+                user_id=#{userId}
             </if>
         </where>
     </select>
@@ -35,6 +35,6 @@
 
     <insert id="insertUser" parameterType="com.zt.example.domain.user.User">
             insert into example_user (user_id, password,
-            values (#{userID},#{password},
+            values (#{userId},#{password},
         </insert>
 </mapper>

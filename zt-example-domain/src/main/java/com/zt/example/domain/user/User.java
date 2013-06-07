@@ -11,19 +11,9 @@ public class User {
     public String email;//用户邮箱
     public Integer sex;//用户性别
     public Integer  userType;//用户类型
-    public String pwd;//用户密码
+    public String password;//用户密码
     public String  createDate;
     public String status;
-
-    public User() {
-    }
-
-    public User(String userId, String email, Integer sex, Integer userType) {
-        this.userId = userId;
-        this.email = email;
-        this.sex = sex;
-        this.userType = userType;
-    }
 
     public String getUserId() {
         return userId;
@@ -57,12 +47,12 @@ public class User {
         this.userType = userType;
     }
 
-    public String getPwd() {
-        return pwd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getCreateDate() {
