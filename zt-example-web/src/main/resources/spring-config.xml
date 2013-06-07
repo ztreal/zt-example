@@ -17,6 +17,7 @@
 
     <context:component-scan base-package="com.zt.example"/>
 
+
     <!-- 解决字符串乱码 -->
     <bean
             class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
@@ -64,5 +65,6 @@
     <!--<mvc:resources mapping="/css/**" location="/css/" cache-period="31556926"/>-->
     <!--<mvc:resources mapping="*" location="/WEB-INF/vm/" cache-period="31556926"/>-->
 
+    <import resource="spring-config-dao.xml" />
 
 </beans>

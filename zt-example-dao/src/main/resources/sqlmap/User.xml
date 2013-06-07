@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.zt.example.domain.user.User">
-    <resultMap id="LotteryRecordsMap" type="LotteryRecordsPo">
+    <resultMap id="UserMap" type="User">
         <result column="user_id" property="userID" />
         <result column="password" property="password" />
         <result column="status" property="status" />
@@ -11,18 +11,18 @@
     </resultMap>
 
     <sql id="commonColumns">
-      user_id, password ，status,create_date
+      user_id, password,status,create_date
     </sql>
 
     <select id="queryByguID" parameterType="java.lang.String"
-            resultMap="LotteryRecordsMap">
+            resultMap="UserMap">
         select <include refid="commonColumns"/>
         from example_user
         where user_id=#{userID}
     </select>
 
-    <select id="queryAll" parameterType="LotteryRecordsPo"
-            resultMap="LotteryRecordsMap">
+    <select id="queryAll" parameterType="com.zt.example.domain.user.User"
+            resultMap="UserMap">
         select <include refid="commonColumns"/>
         from example_user
         <where>

@@ -14,4 +14,10 @@ public interface UserDao {
      * @param user  用户vo
      */
     public void insertUser(User user);
+
+    /**
+     * 查询用户
+     * @param user  用户vo
+     */
+    public void queryAll(User user);
 }

@@ -11,7 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-
+/**
+ * User: zhangtan
+ * Date: 13-6-6
+ * Time: 下午1:49
+ */
 public class VelocityToolsView extends VelocityLayoutView {
 
     private ViewToolManager toolManager;

@@ -20,14 +20,20 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="typeAliasesPackage" value="com.zt.example.dao"/>
-        <property name="configLocation" value="classpath:ibatis/integral-SqlMap-Config.xml" />
+        <property name="typeAliasesPackage" value="com.zt.example.domain"/>
+        <property name="configLocation" value="classpath:example-SqlMap-Config.xml" />
     </bean>
 
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactory"  ref="sqlSessionFactory"/>
-        <property name="basePackage" value="com.speed.integral.dao"/>
+        <property name="basePackage" value="com.zt.example.dao"/>
+    </bean>
+
+
+    <bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.zt.example.dao.user.UserDao" />
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
 
     <!-- 定义事务管理器(声明式的事务) -->

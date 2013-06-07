@@ -1,4 +1,4 @@
-package dao;
+package com.zt.example.web.dao;
 
 import org.bson.BSONObject;
 import org.bson.BasicBSONObject;
@@ -7,11 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
  * User: zhangtan
  * Date: 12-8-10
  * Time: 上午9:19
- * To change this template use File | Settings | File Templates.
  */
 public class BsonTest {
     public static void main(String args[]){
